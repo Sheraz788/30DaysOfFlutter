@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learning/dartdatatypes/dart_data_types.dart';
+import 'package:flutter_learning/widgets/HomeScreen.dart';
+// import 'package:flutter_learning/widgets/ProfileScreen.dart';
 //Day1
 //Dart lang Datatypes
 //MaterialApp (whats inside material app)
@@ -13,9 +16,10 @@ import 'package:flutter/material.dart';
 
 void main() {
 
-
   runApp(const MyApp());
+
 }
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -24,33 +28,21 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    print(returnStringValue(0));
 
-    return const Placeholder();
+    //dart data types class
+    // DartDataTypes dartDataTypes = DartDataTypes();
+    // print(dartDataTypes.returnStringValue(5));
+
+    return MaterialApp(
+      //application settings
+      title: "Material App",
+      debugShowCheckedModeBanner: false,
+      initialRoute: "/home",
+
+      routes: {
+        "/home" : (context) => HomeScreen(),
+      },
+    );
   }
 
-
-  //fun to return string and pass some integer value and divide by 3, 5, and 15 to print fizz, buzz, fizzbuzz
-
-
-  String returnStringValue(int? param) {
-
-    if (param == null ) return "Null Value is passed";
-
-    int valuePassed = param ?? 1;
-
-    if (valuePassed % 3 == 0 && valuePassed % 5 == 0) {
-      return "FizzBuzz";
-    }
-
-    if(valuePassed % 3 == 0){
-      return "Fizz";
-    }
-
-    if(valuePassed % 5 == 0) {
-      return "Buzz";
-    }
-
-    return "Cannot be converted to Fizz, Buzz or FizBuzz ";
-  }
 }
