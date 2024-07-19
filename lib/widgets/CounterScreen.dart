@@ -10,13 +10,21 @@ class CounterScreen extends StatelessWidget {
         title: Text("Counter Screen"),
       ),
       body: Container(
-        decoration: BoxDecoration(color: Colors.white),
-        child: Row(
+        width: MediaQuery.of(context).size.width,
+        decoration: BoxDecoration(color: Colors.red),
+        child: Column(
           children: [
-
+            ElevatedButton(onPressed: (){
+              print("Increase Tapped");
+            }, child: Text("Elevated Button")),
+            TextButton(onPressed: (){}, child: Text("Simple Text Button")),
+            OutlinedButton(onPressed: (){}, child: Text("Outline Button", style: TextStyle(
+              color: Colors.green,
+            )))
           ],
         ),
-      )
+      ),
+      floatingActionButton: FloatingActionButton(onPressed: (){},child: Icon(Icons.add),),
     );
   }
 }
