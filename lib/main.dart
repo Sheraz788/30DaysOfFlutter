@@ -1,16 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learning/dartdatatypes/dart_data_types.dart';
-import 'package:flutter_learning/widgets/CounterScreen.dart';
-// import 'package:flutter_learning/widgets/ProfileScreen.dart';
+import 'package:flutter_learning/widgets/MainScreen.dart';
 
-//Day1
-//Dart lang Datatypes
-//MaterialApp (whats inside material app)
-//Scaffold (basics of scaffold)
-//Routes
-//Themes
-//Google Fonts
-//Buttons (Floating Button, Elevated Button,  Gestures Buttons etc)
+//Day2
+//Navigator
+//Drawer
+//App Bar
+//ListView, SingleChild, ScrollView
+//ListView Builder
 
 void main() {
 
@@ -46,15 +42,7 @@ class MyApp extends StatelessWidget {
       title: "Material App",
       debugShowCheckedModeBanner: false,
 
-
-
-
-      initialRoute: "/home",
-
-      routes: {
-        "/home" : (context) => CounterScreen(),
-      },
-
+      home: MainScreen(),
     );
   }
 
