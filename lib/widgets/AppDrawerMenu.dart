@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_learning/widgets/CustomDrawerHeader.dart';
 import 'package:flutter_learning/widgets/DetailScreen.dart';
 
 class AppDrawerMenu extends StatelessWidget {
@@ -15,10 +16,7 @@ class AppDrawerMenu extends StatelessWidget {
           children: [
             DrawerHeader(
               padding: EdgeInsets.zero,
-              child: UserAccountsDrawerHeader(
-                  margin: EdgeInsets.zero,
-                  accountName: Text("Junaid Kumari"),
-                  accountEmail: Text("mtechviral@gmail.com")),
+              child: Customdrawerheader(),
             ),
             ListTile(
               leading: Icon(
