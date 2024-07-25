@@ -9,50 +9,50 @@ class AppDrawerMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      child: Container(
 
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: [
-            DrawerHeader(
-              padding: EdgeInsets.zero,
-              child: Customdrawerheader(),
+      child: ListView(
+        padding: EdgeInsets.zero,
+        children: [
+          const DrawerHeader(
+            decoration: BoxDecoration(color: Colors.cyan),
+            child: Customdrawerheader(),
+            margin: EdgeInsets.zero,
+            padding: EdgeInsets.all(0),
+          ),
+          ListTile(
+            leading: Icon(
+              CupertinoIcons.home,
+              color: Colors.white,
             ),
-            ListTile(
-              leading: Icon(
-                CupertinoIcons.home,
-                color: Colors.white,
-              ),
-              textColor: Colors.green,
-              tileColor: Colors.deepPurple,
-              title: Text(
-                "Home",
-              ),
-              onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return DetailScreen();
-                }));
-              },
+            textColor: Colors.green,
+            tileColor: Colors.deepPurple,
+            title: Text(
+              "Home",
             ),
-            SizedBox(
-              height: 5,
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return DetailScreen();
+              }));
+            },
+          ),
+          SizedBox(
+            height: 5,
+          ),
+          ListTile(
+            leading: Icon(
+              CupertinoIcons.cart,
+              color: Colors.white,
             ),
-            ListTile(
-              leading: Icon(
-                CupertinoIcons.cart,
-                color: Colors.white,
-              ),
-              textColor: Colors.green,
-              tileColor: Colors.deepPurple,
-              title: Text(
-                "Cart Page",
-              ),
-              onTap: () {
-                Navigator.pop(context);
-              },
+            textColor: Colors.green,
+            tileColor: Colors.deepPurple,
+            title: Text(
+              "Cart Page",
             ),
-          ],
-        ),
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
+        ],
       ),
     );
   }
