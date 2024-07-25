@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learning/widgets/MainScreen.dart';
+import 'package:flutter_learning/screens/MainScreen.dart';
 
 //Day2
 //Navigator

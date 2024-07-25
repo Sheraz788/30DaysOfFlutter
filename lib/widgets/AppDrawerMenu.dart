@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_learning/screens/FavoriteScreen.dart';
 import 'package:flutter_learning/widgets/CustomDrawerHeader.dart';
-import 'package:flutter_learning/widgets/DetailScreen.dart';
+import 'package:flutter_learning/screens/DetailScreen.dart';
 
 class AppDrawerMenu extends StatelessWidget {
   const AppDrawerMenu({super.key});
@@ -30,9 +31,7 @@ class AppDrawerMenu extends StatelessWidget {
               "Home",
             ),
             onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return DetailScreen();
-              }));
+              Navigator.pop(context);
             },
           ),
           SizedBox(
@@ -40,18 +39,41 @@ class AppDrawerMenu extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(
-              CupertinoIcons.cart,
+              CupertinoIcons.info,
               color: Colors.white,
             ),
             textColor: Colors.green,
             tileColor: Colors.deepPurple,
             title: Text(
-              "Cart Page",
+              "Details",
             ),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return DetailScreen();
+              }));
             },
           ),
+
+          SizedBox(
+            height: 5,
+          ),
+          ListTile(
+            leading: Icon(
+              Icons.favorite,
+              color: Colors.white,
+            ),
+            textColor: Colors.green,
+            tileColor: Colors.deepPurple,
+            title: Text(
+              "Favorite",
+            ),
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return Favoritescreen();
+              }));
+            },
+          ),
+
         ],
       ),
     );

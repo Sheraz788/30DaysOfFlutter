@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_learning/widgets/AppDrawerMenu.dart';
-import 'package:flutter_learning/widgets/DetailScreen.dart';
+import 'package:flutter_learning/screens/DetailScreen.dart';
 import 'package:flutter_learning/widgets/ListViewWidgets/HeadingItem.dart';
 import 'package:flutter_learning/widgets/ListViewWidgets/ListItem.dart';
 import '../models/ScreenArgs.dart';
